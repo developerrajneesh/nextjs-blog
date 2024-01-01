@@ -22,10 +22,10 @@ function NavbarHeader({ setHeight }) {
   };
 
   return (
-    <>
+    <div className="fixed-top">
       <Navbar
         expand="lg"
-        className={` fixed-top  w-100  ${
+        className={` sticky-top  w-100  ${
           scrollPosition > 2 && "navbar-main shadow"
         }`}
       >
@@ -51,7 +51,7 @@ function NavbarHeader({ setHeight }) {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
+    </div>
   );
 }
 
