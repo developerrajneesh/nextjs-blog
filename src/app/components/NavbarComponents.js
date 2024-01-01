@@ -7,10 +7,10 @@ import { IoSearchSharp } from "react-icons/io5";
 
 function NavbarHeader({ setHeight }) {
   return (
-    <div className="fixed-top navbar-main">
+    <>
       <Navbar
         expand="lg"
-        className={` sticky-top  w-100  
+        className={` sticky-top navbar-main 
           shadow
         `}
       >
@@ -36,7 +36,7 @@ function NavbarHeader({ setHeight }) {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
+    </>
   );
 }
 
