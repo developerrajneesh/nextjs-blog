@@ -13,7 +13,7 @@ const Tab = ({height}) => {
     <div>
     <ul className={`nav  tab-position ${height >=294 && "tab-position-scroll" }  nav-tabs justify-content-center `}>
       {['All', "React Js", 'Node js', "Mongo Db", "CSS", "Java Script"].map((tabNumber) => (
-        <li className="nav-item" key={tabNumber}>
+        <li className="nav-item" style={{ cursor: "pointer" }} key={tabNumber}>
           <p
             className={`nav-link text-light mx-2 ${activeTab === tabNumber ? 'active text-dark' : ''}`}
             onClick={() => handleTabClick(tabNumber)}
