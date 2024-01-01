@@ -6,28 +6,13 @@ import { useEffect, useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 
 function NavbarHeader({ setHeight }) {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll1);
-    return () => {
-      window.removeEventListener("scroll", handleScroll1);
-    };
-  }, []);
-
-  const handleScroll1 = () => {
-    const currentPosition = window.pageYOffset;
-    setScrollPosition(currentPosition);
-    setHeight(currentPosition);
-  };
-
   return (
     <div className="fixed-top navbar-main">
       <Navbar
         expand="lg"
-        className={` sticky-top  w-100  ${
-          scrollPosition > 2 && " shadow"
-        }`}
+        className={` sticky-top  w-100  
+          shadow
+        `}
       >
         <Container fluid>
           <Navbar.Brand className="text-light" style={{ cursor: "pointer" }}>
