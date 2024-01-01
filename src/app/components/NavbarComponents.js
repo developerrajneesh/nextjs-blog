@@ -22,11 +22,11 @@ function NavbarHeader({ setHeight }) {
   };
 
   return (
-    <div className="fixed-top">
+    <div className="fixed-top navbar-main">
       <Navbar
         expand="lg"
         className={` sticky-top  w-100  ${
-          scrollPosition > 2 && "navbar-main shadow"
+          scrollPosition > 2 && " shadow"
         }`}
       >
         <Container fluid>
