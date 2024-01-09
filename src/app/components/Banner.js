@@ -1,7 +1,7 @@
 import React from "react";
 import Tab from "./Tab";
 
-function Banner({height}) {
+function Banner({height,setFilterState}) {
   return (
     <div className="banner  position-relative">
       <div className="d-flex  h-100 align-items-center justify-content-center">
@@ -13,7 +13,7 @@ function Banner({height}) {
         </p>
        </div>
       </div>
-      <Tab height={height}/>
+      <Tab setFilterState={setFilterState} height={height}/>
     </div>
   );
 }

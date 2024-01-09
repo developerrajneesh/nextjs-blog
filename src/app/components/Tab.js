@@ -2,11 +2,12 @@
 
 import React, { useState } from 'react';
 
-const Tab = ({height}) => {
+const Tab = ({height,setFilterState}) => {
   const [activeTab, setActiveTab] = useState('All');
 
   const handleTabClick = (tabNumber) => {
     setActiveTab(tabNumber);
+    setFilterState(tabNumber)
   };
 
   return (
