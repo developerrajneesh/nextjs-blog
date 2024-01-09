@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
 import Link from "next/link";
-import { dataStore } from "@/Storage/ApiCall";
+import { DataStore } from "@/app/Storage/ApiCall";
 
 export default function Home() {
   const [height, setHeight] = useState(0);
-  const {data}= dataStore()
+  const {data}= DataStore()
   const myUrl = (url) => {
     const data = url.split(" ").join("-");
     return data;
