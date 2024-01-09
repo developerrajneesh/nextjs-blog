@@ -7,7 +7,7 @@ import { FaPhone } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 function Footer() {
   return (
-    <div className="  pt-1" style={{ background: "#4258B3", color: "white" }}>
+    <div className="  pt-1" style={{ background: "#3b4057", color: "white" }}>
      <div className="d-flex justify-content-center flex-wrap gap-3 mt-4">
               <a
                 target="_blank"

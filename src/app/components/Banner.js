@@ -13,7 +13,6 @@ function Banner({height}) {
         </p>
        </div>
       </div>
-
       <Tab height={height}/>
     </div>
   );

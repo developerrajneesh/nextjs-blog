@@ -1,16 +1,33 @@
 import React from "react";
 
-function Card() {
+function Card({ item }) {
+  function formatDate(inputDate) {
+    const dateObject = new Date(inputDate);
+    const day = String(dateObject.getDate()).padStart(2, "0");
+    const month = String(dateObject.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+    const year = dateObject.getFullYear();
+
+    return `${day}/${month}/${year}`;
+  }
+
   return (
     <>
-      <div className="custom-card">
-        <img src={'/gkTruckImg.png'} className="img-blog" alt="img-blog" />
+      <div className="custom-card custom-card-blog">
+        <img
+          src={`https://cpapi.rajneesh.site/${item.img}`}
+          className="img-blog"
+          alt="img-blog"
+        />
         <div className="d-flex justify-content-between align-items-center">
-          <h3 className="my-3">{'Lorem jdqjd efwefi ewfewf fewfwef'}</h3>{" "}
-          <p className="my-3">20/12/2023</p>
+          <p className="my-3 blog-title">{item.author}</p>
+          <p className="my-3">{formatDate(item.createdAt)}</p>
         </div>
-        <p>{'lorem ffew ewfwefew ewgewg ewgweg ewgwg wegw ewgg gewg egwgw gwegw gwegwe gweg wgwg ew'}</p>
-        <p>{'lorem ffew ewfwefew ewgewg ewgweg ewgwg wegw ewgg gewg egwgw gwegw gwegwe gweg wgwg ew'}</p>
+        <h3 className=" blog-title">{`${item.title}`}</h3>{" "}
+        <div
+          className="text-blog"
+          style={{ color: "white" }}
+          dangerouslySetInnerHTML={{ __html: item.contant }}
+        ></div>
       </div>
     </>
   );

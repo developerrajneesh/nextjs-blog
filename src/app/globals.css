@@ -1,13 +1,11 @@
 .banner{
   /* background: linear-gradient(90deg, hsla(216, 96%, 56%, 1) 0%, hsla(178, 64%, 65%, 1) 100%); */
-  background-color: #4258B3 !important;
+  background-color: #3b4057 !important;
 
   height:400px;
 }
 .navbar-main{
-  position: static;
-  top: 0;
-  width:100%;
+
   background-color: #4258B3 !important;
 }
 
@@ -50,7 +48,7 @@
 }
 
 .blogs-main{
-  background-color: #4258B3;
+  background-color: #3b4057;
 }
 .search-input{
   background-color: transparent;
@@ -67,3 +65,16 @@ outline: none;
   left: 20px;
 color: white;
 }
+.custom-card-blog{
+  max-height: 502px;
+  overflow: hidden;
+  }
+  .text-blog{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+            line-clamp: 2;
+    -webkit-box-orient: vertical;
+  
+  }  
